@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ME MANAS</title>
+</head>
+<body style="background-color: black;color:rgb(217, 219, 219)">
+    <ul class="lang">
+        <li>javascript</li>
+    </ul>
+    
+</body>
+<script>
+    function addlang(langname){
+        const li = document.createElement("li");
+        li.innerHTML = langname;
+        document.querySelector(".lang").appendChild(li);
+    }
+    addlang("python");
+    addlang("java");
+
+    function addlang2(langname){
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langname));
+        document.querySelector(".lang").appendChild(li);
+    }
+    addlang2("c++");
+    addlang2("c#");
+
+    //edit
+    const langList = document.querySelector("li:nth-child(2)");
+    //const newli = document.createElement("li");
+    newli.textContent = "javascript and python";
+    langList.replaceWith(newli);    
+
+</script>
+</html>
